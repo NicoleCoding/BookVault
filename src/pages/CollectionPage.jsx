@@ -1,3 +1,41 @@
+import { useState } from "react";
+import BooksDisplay from "../components/BooksDisplay";
+import Form from "../components/Form";
+
 export default function CollectionPage() {
+    const [library, setLibrary] = useState([]);
+    const [showForm, setShowForm] = useState(false);
+
+    const addBook = (title, author, pages, read) => {
+        const newBook = { title, author, pages, read };
+        setLibrary([...library, newBook]);
+    };
+
+    const toggleReadStatus = (index) => {
+        const updatedLibrary = library.map((book, currentIndex) => 
+            currentIndex === index ? {...book, read: !book.read } : book
+        );
+        setLibrary(updatedLibrary);
+    }
+
+    const removeBook = (index) => {
+        setLibrary(library.filter((_, i) => i !== index));
+    };
+
+    return (
+        <div>
+            <button onClick={() => setShowForm(!showForm)}>
+                {showForm ? 'Hide form' : 'Add new book'}
+            </button>
+            {showForm && <Form onAddBook={addBook} />}
+            <BooksDisplay
+                books={library}
+                onToggleReadStatus={toggleReadStatus}
+                onRemove={removeBook}
+
+
+            />
+        </div>
+    );
     
 }

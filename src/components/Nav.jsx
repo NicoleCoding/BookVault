@@ -4,7 +4,7 @@ export default function Nav() {
     return (
         <nav>
             <Link to="/">Search</Link>
-            <Link to="/CollectionPage">Book Collection</Link>
+            <Link to="/collection">Book Collection</Link>
         </nav>
 
     );
