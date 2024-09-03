@@ -37,7 +37,7 @@ Before you begin, ensure that you have the following installed on your machine:
 - Search for books: You can search the books on the search page by typing in the whole title or part of the title
 - Manage your book collection: You can add and remove books on the collection page. You can also change the read status.
 
-# Note that the application is work in progress and future enhancements will be made.
+Note that the application is work in progress and future enhancements will be made!
 
 # Acknowledgements
 - React - A library for creating user interfaces (https://react.dev/)
@@ -48,10 +48,3 @@ Before you begin, ensure that you have the following installed on your machine:
 
 
 
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
