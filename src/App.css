@@ -3,7 +3,11 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #333333;
+}
+
+body {
+  background-color: #F5F5F5;
+
 }
 
 #searchbar {
@@ -20,7 +24,7 @@ input {
   margin: 2rem;
   padding: 10px 20px;
   width: 10rem;
-  background-color: #008080;
+  background-color: #00796B;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -28,8 +32,9 @@ input {
 }
 
 header {
-  background-color: #008080;
-  color: white;
+  width: auto;
+  background-color: #F0F0F0;
+  color:  #333333;
   padding: 3rem;
 }
 
@@ -38,7 +43,11 @@ nav {
 }
 
 .link {
-  color: white;
+  color:  #333333;
   margin: 1rem;
+}
+
+.link:hover {
+  color: #00796B;
 }
  

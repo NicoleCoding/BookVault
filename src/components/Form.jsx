@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState } from "react";
+import Button from "./Button";
 
 export default function Form({onAddBook}) {
     const [title, setTitle] = useState('');
@@ -24,7 +25,7 @@ export default function Form({onAddBook}) {
                 <input type="checkbox" checked={readStatus} onChange={(e) => setReadStatus(e.target.checked)} />
                 Read
             </label>
-            <button type="submit">Add book</button>
+            <Button text="Add book" />
 
         
         </form>
