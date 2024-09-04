@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 
 export default function SearchBar(props) {
     return (
-        <div>
+        <div id="searchbar">
             <input
                 type="text"
                 placeholder="Search books"
                 onChange={props.changeContent}
             />
-            <button onClick={() => props.search(props.query)}>Search</button>
+            <button id="searchbutton" onClick={() => props.search(props.query)}>Search</button>
         </div>
 
     );
