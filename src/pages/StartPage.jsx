@@ -3,7 +3,7 @@ import Button from "../components/Button"
 
 export default function StartPage() {
     return (
-        <div id="container">
+        <div>
             <section id="hero">
                 <p id="hero-text">Discover your next favorite book and manage your reading collection effortlessly. </p>
                 <Link to="/search">

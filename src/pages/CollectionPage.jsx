@@ -1,6 +1,7 @@
 import { useState } from "react";
 import BooksDisplay from "../components/BooksDisplay";
 import Form from "../components/Form";
+import Button from "../components/Button";
 
 export default function CollectionPage() {
     const [library, setLibrary] = useState([]);
@@ -24,9 +25,7 @@ export default function CollectionPage() {
 
     return (
         <div>
-            <button onClick={() => setShowForm(!showForm)}>
-                {showForm ? 'Hide form' : 'Add new book'}
-            </button>
+            <Button className="secondary-button" onClick={() => setShowForm(!showForm)} text={showForm ? 'Hide form' : 'Add new book'} />
             {showForm && <Form onAddBook={addBook} />}
             <BooksDisplay
                 books={library}
