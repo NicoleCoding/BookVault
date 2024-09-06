@@ -34,7 +34,6 @@ body {
 
 #hero-text {
   background-color: rgba(255, 255, 255, 0.75);
-  border-radius: 10px;
   text-align: center;
   width: 60rem;
   font-size: large;
@@ -44,7 +43,7 @@ body {
 }
 
 .primary-button {
-  margin: 2rem;
+  margin: 1rem;
   padding: 10px 20px;
   width: 10rem;
   background-color: #00796B;
@@ -56,14 +55,15 @@ body {
 
 .secondary-button {
   margin: 1rem;
+  padding: 10px 20px;
   background-color: #FF7043;
   border: #FF7043;
 
 }
 
 #searchbar {
-  padding: 5rem;
-  margin: 5rem;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 input {
@@ -93,5 +93,21 @@ nav {
 
 .link:hover {
   color: #00796B;
+}
+
+table {
+  background-color: #F0F0F0;
+  padding: 1rem;
+  border: solid #E0E0E0 1px;
+  box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.book-item {
+  background-color: #F0F0F0;
+  padding: 1rem;
+  border: 1px solid #E0E0E0;
+  margin: 1rem;
+  border-radius: 5px;
 }
  

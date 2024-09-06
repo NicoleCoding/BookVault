@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 export default function BookItem({ book, onToggleReadStatus, onRemove }) {
     return (
         <div className="book-item">
@@ -5,8 +7,8 @@ export default function BookItem({ book, onToggleReadStatus, onRemove }) {
             <p>{book.author}</p>
             <p>{book.pages} pages</p>
             <p>{book.read ? "Read" : "Not Read"}</p>
-            <button onClick={onToggleReadStatus}>Select Read Status</button>
-            <button onClick={onRemove}>Remove Book</button>
+            <Button className="primary-button" onClick={onToggleReadStatus} text="Read Status" />
+            <Button className="secondary-button" onClick={onRemove} text="Remove Book" />
         </div>
     );
 }
