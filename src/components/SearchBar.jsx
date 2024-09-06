@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Button from "./Button";
 
 export default function SearchBar(props) {
     return (
@@ -8,7 +9,9 @@ export default function SearchBar(props) {
                 placeholder="Search books"
                 onChange={props.changeContent}
             />
-            <button id="searchbutton" onClick={() => props.search(props.query)}>Search</button>
+
+            <Button className="primary-button" text="search" onClick={() => props.search(props.query)} />
+
         </div>
 
     );

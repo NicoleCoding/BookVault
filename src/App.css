@@ -41,17 +41,7 @@ body {
   font-weight: 500;
 }
 
-#searchbar {
-  padding: 5rem;
-  margin: 5rem;
-}
-
-input {
-  padding: 0.6rem;
-  margin: 1rem;
-}
-
-#searchbutton {
+.primary-button {
   margin: 2rem;
   padding: 10px 20px;
   width: 10rem;
@@ -60,6 +50,20 @@ input {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.secondary-button {
+
+}
+
+#searchbar {
+  padding: 5rem;
+  margin: 5rem;
+}
+
+input {
+  padding: 0.6rem;
+  margin: 1rem;
 }
 
 header {
