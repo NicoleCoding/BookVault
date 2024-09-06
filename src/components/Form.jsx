@@ -25,7 +25,7 @@ export default function Form({onAddBook}) {
                 <input type="checkbox" checked={readStatus} onChange={(e) => setReadStatus(e.target.checked)} />
                 Read
             </label>
-            <Button text="Add book" />
+            <Button className="primary-button" text="Add book" />
 
         
         </form>
