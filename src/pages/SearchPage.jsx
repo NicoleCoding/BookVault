@@ -27,6 +27,8 @@ export default function SearchPage() {
 
     return (
         <>
+            <h2>Find Your Next Favorite Book</h2>
+            <p>Use the search bar to find books by title, author, or subject. Whether you are looking for a specific book or exploring new reads, this is where your next adventure begins. Once you find a book you like, you can add it to your personal collection for future reading</p>
             <SearchBar search={search} changeContent={changeContent} query={query}/>
             <ResultOverview data={result} displaySelectedBook={displaySelectedBook}/>
             <DetailsView selectedBook={selectedBook}/>

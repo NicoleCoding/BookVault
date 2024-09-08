@@ -10,7 +10,7 @@ export default function SearchBar(props) {
                 onChange={props.changeContent}
             />
 
-            <Button className="primary-button" text="search" onClick={() => props.search(props.query)} />
+            <Button className="primary-button" text="Search" onClick={() => props.search(props.query)} />
 
         </div>
 

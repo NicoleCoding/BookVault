@@ -25,6 +25,8 @@ export default function CollectionPage() {
 
     return (
         <div>
+            <h2>Your Book Collection</h2>
+            <p>This is where your favorite books live! Browse through your collection, track what you have already read, and keep tabs on books you want to read next. You can also remove books that you no longer want in your collection."</p>
             <Button className="secondary-button" onClick={() => setShowForm(!showForm)} text={showForm ? 'Hide form' : 'Add new book'} />
             {showForm && <Form onAddBook={addBook} />}
             <BooksDisplay
