@@ -16,6 +16,7 @@ body {
   align-items: center;
   width: 100%;
   height: 50rem;
+  margin-top: 15rem;
 }
 
 #hero {
@@ -30,6 +31,10 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+#hero-heading {
+  color: white;
 }
 
 #hero-text {
@@ -76,6 +81,8 @@ input {
 }
 
 header {
+  position: absolute;
+  top: 0;
   width: 120rem;
   height: 15rem;
   background-color: #F0F0F0;
