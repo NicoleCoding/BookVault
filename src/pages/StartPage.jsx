@@ -5,7 +5,7 @@ export default function StartPage() {
     return (
         <div>
             <section id="hero">
-                <h2 id="hero-heading">Welcome to Your Personal Library!</h2>
+                <h2 id="hero-heading">Welcome to Your Personal BookVault!</h2>
                 <p id="hero-text">Organize and track your reading journey with ease. Whether you are exploring new titles or managing your personal collection, we are here to help you discover, collect, and enjoy books.
                                   Get started by searching for your next read or checking your collection! </p>
                 <Link to="/search">

@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { useQuery } from "react-query";
 import SearchBar from "../components/SearchBar";
 import ResultOverview from '../components/ResultOverview';
 import DetailsView from '../components/DetailsView';
+import axios from "axios";
 
 export default function SearchPage() {
     // States for the search result, the query and the book which is selected by the user.
-    const [result, setResult] = useState([]);
     const [query, setQuery] = useState('');
     const [selectedBook, setSelectedBook] = useState(null);
 
@@ -14,12 +15,20 @@ export default function SearchPage() {
         setQuery(event.target.value);
     }
     
-    // API is fetched when user searches, with query as argument and fetches the corresponding query.
-    function search(query) {
-        fetch(`https://openlibrary.org/search.json?title=${query}`)
-            .then((response) => response.json())
-            .then((data) => setResult(data.docs));
+    // Definition of function used to fetch data from the API.
+    const fetchBooks = async (query) => {
+        const { data } = await axios.get(`https://openlibrary.org/search.json?title=${query}`);
+        return data.docs;
     }
+
+    // React Query handles the API request when the user searches.
+    const { data: result = [], isLoading, isError } = useQuery(
+        ['books', query], // Key to identify the query.
+        () => fetchBooks(query),
+        {
+            enabled: query.length > 0, // Query run only when search input is valid.
+        }
+    );
 
     function displaySelectedBook(index) {
         setSelectedBook(result[index]);
@@ -29,7 +38,7 @@ export default function SearchPage() {
         <>
             <h2>Find Your Next Favorite Book</h2>
             <p>Use the search bar to find books by title, author, or subject. Whether you are looking for a specific book or exploring new reads, this is where your next adventure begins. Once you find a book you like, you can add it to your personal collection for future reading</p>
-            <SearchBar search={search} changeContent={changeContent} query={query}/>
+            <SearchBar search={() => {}} changeContent={changeContent} query={query}/>
             <ResultOverview data={result} displaySelectedBook={displaySelectedBook}/>
             <DetailsView selectedBook={selectedBook}/>
         </>
