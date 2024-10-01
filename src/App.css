@@ -122,6 +122,12 @@ table {
   border-radius: 5px;
 }
 
+#books-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+
 form {
   display: flex;
   flex-direction: column;
