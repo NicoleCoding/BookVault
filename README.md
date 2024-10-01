@@ -1,4 +1,4 @@
-# Library App
+# BookVault - Library App
 
 # Project Overview
 This is a React-based web application, which allows users to search for books, and also add books to their own collection. In the collection, users can toggle the read status and also remove books.
