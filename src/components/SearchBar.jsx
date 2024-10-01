@@ -1,16 +1,26 @@
 import { useState, useEffect } from "react";
 import Button from "./Button";
 
+
 export default function SearchBar(props) {
+
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            props.search(props.query);
+
+        }
+    };
+
     return (
         <div id="searchbar">
             <input
                 type="text"
                 placeholder="Search books"
                 onChange={props.changeContent}
+                onKeyDown={handleKeyDown}
             />
 
-            <Button className="primary-button" text="Search" onClick={() => props.search(props.query)} />
+            <Button className="primary-button" text="Search" onClick={() => props.search(props.query)}  />
 
         </div>
 
