@@ -2,28 +2,31 @@
 #container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 90vw;
-  height: 50rem;
+  height: 120vh;
   padding: 0;
   margin: auto;
 }
 
 body {
-  background-color: #F5F5F5;
   padding: 1rem;
-
+  background-color: #F0F0F0;
 }
 
 header {
   background-color: #F0F0F0;
   color:  #333333;
+  width: 100%;
   margin: 0;
-  padding: 0.5rem;
-  width: 90vw;
+  overflow-x: hidden;
+}
+
+nav {
+  overflow-y: hidden;
 }
 
 footer {
-  width: 90vw;
   color:  #333333;
   text-align: center;
 }
@@ -57,13 +60,15 @@ footer {
   margin: 1rem;
   font-weight: 500;
 }
+
 .page-heading {
   color:  #333333;
-
+  text-align: center;
 }
 
 .page-intro {
   color: #333333;
+  text-align: center;
 }
 
 .menu {
@@ -86,6 +91,7 @@ footer {
 .link {
   color:  #333333;
   padding: 1rem;
+  font-size:x-large;
 }
 
 .link:hover {
@@ -106,7 +112,7 @@ footer {
 .secondary-button {
   margin: 1rem;
   padding: 10px 20px;
-  width: 10rem;
+  width: 20rem;
   background-color: #FF7043;
   border: #FF7043;
   text-align: center;
@@ -125,13 +131,25 @@ footer {
 input {
   padding: 1rem;
   width: 18rem;
+  background-color: #F0F0F0;
+  color: #333333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  color: #333333;
+  background-color: #F0F0F0;
 }
 
 
 /* Styles for screens larger than 768px */
 @media only screen and (min-width: 768px) {
   #root {
-    max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
@@ -139,7 +157,6 @@ input {
   
   #container {
     align-items: center;
-    width: 100%;
     height: 50rem;
     margin-top: 15rem;
   }
@@ -209,7 +226,6 @@ input {
   header {
     position: absolute;
     top: 0;
-    width: 120rem;
     height: 15rem;
     background-color: #F0F0F0;
     color:  #333333;
@@ -253,12 +269,6 @@ input {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   
   footer {
