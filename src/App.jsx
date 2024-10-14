@@ -17,11 +17,13 @@ function App() {
       <div id="container">
       <Router>
       <Header />
-        <Routes>
-          <Route path='/' element={<StartPage />} />
-          <Route path='/search' element={<SearchPage />} />
-          <Route path='/collection' element={<CollectionPage />}/>
-        </Routes>
+        <div id="main-content">
+          <Routes>
+            <Route path='/' element={<StartPage />} />
+            <Route path='/search' element={<SearchPage />} />
+            <Route path='/collection' element={<CollectionPage />}/>
+          </Routes>
+        </div>
       </Router>
       <Footer />
     </div>
