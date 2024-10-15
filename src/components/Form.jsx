@@ -18,12 +18,13 @@ export default function Form({onAddBook}) {
 
     return (
         <form onSubmit={handleSubmit}>
+            <h3>Book form</h3>
             <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" required />
             <input type="text" value={author} onChange={(e) => setAuthor(e.target.value)} placeholder="Author" required />
-            <input type="number" value={pages} onChange={(e) => setPages(e.target.value)} placeholder="Pages" required />
+            <input type="number" min="1" value={pages} onChange={(e) => setPages(e.target.value)} placeholder="Pages" required />
             <label>
                 <input type="checkbox" checked={readStatus} onChange={(e) => setReadStatus(e.target.checked)} />
-                Read
+                <span>Read the book?</span>
             </label>
             <Button className="primary-button" text="Add book" />
 

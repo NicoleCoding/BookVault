@@ -37,8 +37,8 @@ export default function SearchPage() {
     return (
         <>
             <section>
-                <h2 class="page-heading">Find Your Next Favorite Book</h2>
-                <p class="page-intro">Use the search bar to find books by title, author, or subject. Whether you are looking for a specific book or exploring new reads, this is where your next adventure begins. Once you find a book you like, you can add it to your personal collection for future reading</p>
+                <h2 className="page-heading">Find Your Next Favorite Book</h2>
+                <p className="page-intro">Use the search bar to find books by title, author, or subject. Whether you are looking for a specific book or exploring new reads, this is where your next adventure begins. Once you find a book you like, you can add it to your personal collection for future reading</p>
             </section>
             <SearchBar search={() => {}} changeContent={changeContent} query={query}/>
             <ResultOverview data={result} displaySelectedBook={displaySelectedBook}/>
