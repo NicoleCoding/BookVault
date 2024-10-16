@@ -60,11 +60,12 @@ footer {
   align-items: center;
   text-align: center;
   position: relative;
+  border-radius: 5px;
   color: white; /* Text color for contrast */
 }
 
 #hero-text {
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.667);
   text-align: center;
   color:  #333333;
   width: 70vw;
@@ -72,6 +73,7 @@ footer {
   line-height: 1.6;
   width: 90vw;
   height: 35vh;
+  border-radius: 5px;
   margin: 0;
   padding: 1rem;
   font-weight: 500;
@@ -115,7 +117,7 @@ footer {
 }
 
 .link:hover {
-  color: #88C0D0;
+  color: #4A5D90;
 }
 
 .primary-button {
@@ -131,8 +133,9 @@ footer {
 
 .secondary-button {
   margin: 1rem;
-  padding: 10px 20px;
+  padding: 20px 20px;
   width: 20rem;
+  border-radius: 5px;
   background-color: #88C0D0;
   text-align: center;
   color: white;
@@ -227,22 +230,32 @@ input[type="number"] {
   
   .primary-button {
     margin: 1rem;
-    padding: 10px 20px;
-    width: 10rem;
+    padding: 0 16px;
+    height: 36px;
+    width: 15rem;
     color: white;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     text-align: center;
   }
+
+  .primary-button:hover {
+    color: #FFD700;
+  }
   
   .secondary-button {
     margin: 1rem;
-    padding: 10px 20px;
-    width: 10rem;
+    padding: 0 16px;
+    height: 36px;
+    width: 15rem;
     text-align: center;
     color: white;
   
+  }
+
+  .secondary-button:hover {
+    color: #003366;
   }
   
   #searchbar {
@@ -255,7 +268,7 @@ input[type="number"] {
   header {
     position: absolute;
     top: 0;
-    height: 15rem;
+    height: 20rem;
     color:  #333333;
   }
 
@@ -295,7 +308,7 @@ input[type="number"] {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    margin: 1rem;
+    margin: 0;
     background-color: rgb(237, 237, 237);
   }
 
@@ -313,11 +326,19 @@ input[type="number"] {
 
   form {
     border-radius: 5px;
-    padding: 0;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    margin: 1rem;
+    padding: 2rem;
+    margin: 0;
     background-color: rgb(237, 237, 237);
+  }
+
+  .form-slide-in {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+    position: relative;
+  }
+
+  .form-slide-in.form-active {
+    transform: translateX(0);
   }
   
   input[type="text"] {

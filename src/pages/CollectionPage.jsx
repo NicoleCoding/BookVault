@@ -32,7 +32,9 @@ export default function CollectionPage() {
             <Button className="secondary-button" onClick={() => setShowForm(!showForm)} text={showForm ? 'Hide form' : 'Add new book'} />
             </section>
             <section id="collection-container">
-                {showForm && <Form onAddBook={addBook} />}
+                <div className={`form-slide-in ${showForm ? 'form-active' : ''}`}>
+                    {showForm && <Form onAddBook={addBook} />}
+                </div>
                 <BooksDisplay
                     books={library}
                     onToggleReadStatus={toggleReadStatus}
