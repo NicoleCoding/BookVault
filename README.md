@@ -19,7 +19,7 @@ Before you begin, ensure that you have the following installed on your machine:
 
 # Installation
 1. Clone the repository
-   git clone https://github.com/your-username/library-app.git
+   git clone https://github.com/NicoleCoding/BookVault.git
 2.  Navigate to the directory
    cd library-app
 3. Install the dependencies
