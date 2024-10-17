@@ -272,6 +272,11 @@ input[type="number"] {
     color:  #333333;
   }
 
+  footer {
+    margin-top: auto;
+    width: 109.9%;
+  }
+
   #hamburger-container {
     display: none;
   }
