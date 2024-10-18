@@ -8,8 +8,6 @@ const PORT = 5000;
 
 const bookRoutes = require('./routes/books'); // Import the book routes
 
-app.use('/api/books', bookRoutes);
-
 // Middleware to parse JSON
 app.use(express.json());
 
@@ -20,6 +18,9 @@ mongoose.connect(process.env.MONGODB_URI, {
 })
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.log(err));
+
+// Use the book routes
+app.use('/api/books', bookRoutes);
 
 // Sample route
 app.get('/', (req, res) => {

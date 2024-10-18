@@ -3,8 +3,10 @@ import BooksDisplay from "../components/BooksDisplay";
 import Form from "../components/Form";
 import Button from "../components/Button";
 import { useEffect } from "react";
+import axios from 'axios';
 
 export default function CollectionPage() {
+    const [books, setBooks] = useState([]);
     const [library, setLibrary] = useState([]);
     const [showForm, setShowForm] = useState(false);
 
