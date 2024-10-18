@@ -2,25 +2,60 @@ import { useState } from "react";
 import BooksDisplay from "../components/BooksDisplay";
 import Form from "../components/Form";
 import Button from "../components/Button";
+import { useEffect } from "react";
 
 export default function CollectionPage() {
     const [library, setLibrary] = useState([]);
     const [showForm, setShowForm] = useState(false);
 
-    const addBook = (title, author, pages, read) => {
-        const newBook = { title, author, pages, read };
-        setLibrary([...library, newBook]);
+    // Fetch books from the backend when the component mounts
+    useEffect(() => {
+        const fetchBooks = async () => {
+            try {
+                const response = await axios.get("/api/books");
+                setLibrary(response.data);
+            } catch (error) {
+                console.error("Error fetching books:", error);
+            }
+        };
+        fetchBooks();
+    }, []);
+
+    // Add a new book to the backend
+    const addBook = async (title, author, genre, publishedYear, pages, read) => {
+        const newBook = { title, author, genre, publishedYear, pages, read };
+        try {
+            const response = await axios.post("/api/books", newBook);
+            setLibrary([...library, response.data]);
+        } catch (error) {
+            console.error("Error adding book:", error);
+        }
     };
 
-    const toggleReadStatus = (index) => {
-        const updatedLibrary = library.map((book, currentIndex) => 
-            currentIndex === index ? {...book, read: !book.read } : book
-        );
-        setLibrary(updatedLibrary);
-    }
+    // Toggle read status in the backend
+    const toggleReadStatus = async (id) => {
+        const book = library.find((b) => b._id === id);
+        if (!book) return;
 
-    const removeBook = (index) => {
-        setLibrary(library.filter((_, i) => i !== index));
+        try {
+            const response = await axios.put(`/api/books/${id}`, { read: !book.read });
+            const updatedLibrary = library.map((b) =>
+                b._id === id ? response.data : b
+            );
+            setLibrary(updatedLibrary);
+        } catch (error) {
+            console.error("Error updating read status:", error);
+        }
+    };
+
+    // Remove a book from the backend
+    const removeBook = async (id) => {
+        try {
+            await axios.delete(`/api/books/${id}`);
+            setLibrary(library.filter((b) => b._id !== id));
+        } catch (error) {
+            console.error("Error deleting book:", error);
+        }
     };
 
     return (
