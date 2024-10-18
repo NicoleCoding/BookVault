@@ -1,4 +1,3 @@
-import { useState } from "react";
 import BookItem from "./BookItem"
 
 export default function BooksDisplay({ books, onToggleReadStatus, onRemove }) {
@@ -7,9 +6,9 @@ export default function BooksDisplay({ books, onToggleReadStatus, onRemove }) {
   }
     return (
         <div id="books-display">
-          {books.map((book, index) => (
+          {books.map((book) => (
             <BookItem
-            key={index}
+            key={book._id}
             book={book}
             onToggleReadStatus={() => onToggleReadStatus(index)}
             onRemove={() => onRemove(index)}

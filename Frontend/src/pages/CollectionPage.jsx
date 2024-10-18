@@ -14,7 +14,7 @@ export default function CollectionPage() {
     useEffect(() => {
         const fetchBooks = async () => {
             try {
-                const response = await axios.get("/api/books");
+                const response = await axios.get("http://localhost:5000/api/books");
                 setLibrary(response.data);
             } catch (error) {
                 console.error("Error fetching books:", error);
@@ -27,7 +27,7 @@ export default function CollectionPage() {
     const addBook = async (title, author, genre, publishedYear, pages, read) => {
         const newBook = { title, author, genre, publishedYear, pages, read };
         try {
-            const response = await axios.post("/api/books", newBook);
+            const response = await axios.post("http://localhost:5000/api/books", newBook);
             setLibrary([...library, response.data]);
         } catch (error) {
             console.error("Error adding book:", error);
@@ -36,15 +36,15 @@ export default function CollectionPage() {
 
     // Toggle read status in the backend
     const toggleReadStatus = async (id) => {
-        const book = library.find((b) => b._id === id);
-        if (!book) return;
-
+        const book = library.find((b) => b._id === id); // Find the book by ID
+        if (!book) return; // Exit if the book is not found
+    
         try {
-            const response = await axios.put(`/api/books/${id}`, { read: !book.read });
+            const response = await axios.put(`http://localhost:5000/api/books/${id}`, { read: !book.read });
             const updatedLibrary = library.map((b) =>
-                b._id === id ? response.data : b
+                b._id === id ? response.data : b // Update the book in the library
             );
-            setLibrary(updatedLibrary);
+            setLibrary(updatedLibrary); // Update the state with the new library
         } catch (error) {
             console.error("Error updating read status:", error);
         }
@@ -53,8 +53,8 @@ export default function CollectionPage() {
     // Remove a book from the backend
     const removeBook = async (id) => {
         try {
-            await axios.delete(`/api/books/${id}`);
-            setLibrary(library.filter((b) => b._id !== id));
+            await axios.delete(`http://localhost:5000/api/books/${id}`); // Ensure the URL is correct
+            setLibrary(library.filter((b) => b._id !== id)); // Remove the book from the library
         } catch (error) {
             console.error("Error deleting book:", error);
         }

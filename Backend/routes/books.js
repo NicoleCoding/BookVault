@@ -12,13 +12,13 @@ router.post('/', async (req, res) => {
     }
 });
 
-// Get all books
 router.get('/', async (req, res) => {
     try {
-        const books = await Book.find();
+        const books = await Book.find();  // Ensure the Book model is correctly connected to the database
         res.status(200).json(books);
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        console.error("Error fetching books:", error);  // Log error to the backend
+        res.status(500).json({ message: error.message });  // Send error message back to the client
     }
 });
 
