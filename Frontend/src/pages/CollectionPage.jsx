@@ -6,7 +6,6 @@ import { useEffect } from "react";
 import axios from 'axios';
 
 export default function CollectionPage() {
-    const [books, setBooks] = useState([]);
     const [library, setLibrary] = useState([]);
     const [showForm, setShowForm] = useState(false);
 
@@ -40,7 +39,8 @@ export default function CollectionPage() {
         if (!book) return; // Exit if the book is not found
     
         try {
-            const response = await axios.put(`http://localhost:5000/api/books/${id}`, { read: !book.read });
+            const newReadStatus = book.readStatus === 'read' ? 'unread' : 'read'; // Toggle between 'read' and 'unread'
+            const response = await axios.put(`http://localhost:5000/api/books/${id}`, { readStatus: newReadStatus }); // Send updated status to backend
             const updatedLibrary = library.map((b) =>
                 b._id === id ? response.data : b // Update the book in the library
             );

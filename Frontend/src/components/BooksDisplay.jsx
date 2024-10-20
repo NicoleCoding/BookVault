@@ -10,8 +10,8 @@ export default function BooksDisplay({ books, onToggleReadStatus, onRemove }) {
             <BookItem
             key={book._id}
             book={book}
-            onToggleReadStatus={() => onToggleReadStatus(index)}
-            onRemove={() => onRemove(index)}
+            onToggleReadStatus={() => onToggleReadStatus(book._id)}
+            onRemove={() => onRemove(book._id)}
             />
           ))}
         </div>
