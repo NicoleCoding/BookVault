@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import Hamburger from "hamburger-react";
 import { useState } from "react";
+import { FaHome } from 'react-icons/fa';
+import { GiArchiveResearch } from "react-icons/gi";
+import { GiBookshelf } from "react-icons/gi";
 
 export default function Nav() {
 
@@ -13,9 +16,9 @@ export default function Nav() {
                 <Hamburger toggled={isOpen} toggle={setOpen} />
             </div>
             <ul className={`menu ${isOpen ? "open" : ""}`}>
-                <li><Link className="link" to="/">Start</Link></li>
-                <li><Link className="link" to="/search">Search</Link></li>
-                <li><Link className="link" to="/collection">Book Collection</Link></li>
+                <li> <FaHome /><Link className="link" to="/">Start</Link></li>
+                <li><GiArchiveResearch /><Link className="link" to="/search">Search Books</Link></li>
+                <li><GiBookshelf /><Link className="link" to="/collection">Book Collection</Link></li>
             </ul>
         </nav>
 
