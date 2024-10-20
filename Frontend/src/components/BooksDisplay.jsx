@@ -2,7 +2,7 @@ import BookItem from "./BookItem"
 
 export default function BooksDisplay({ books, onToggleReadStatus, onRemove }) {
   if (!Array.isArray(books) || books.length === 0) {
-    return <p>No books available.</p>; // Add fallback when books array is empty or invalid
+    return <p>Your collection is empty so far.</p>; // Add fallback when books array is empty or invalid
   }
     return (
         <div id="books-display">

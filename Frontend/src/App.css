@@ -14,6 +14,11 @@ root {
   background-color: #D8E6FF;
 }
 
+#button-container {
+  display: flex;
+  justify-content: center;
+}
+
 body {
   padding: 1rem;
   background-color: #D8E6FF;
