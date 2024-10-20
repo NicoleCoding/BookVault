@@ -40,10 +40,10 @@ Before you begin, ensure that you have the following installed on your machine:
    cd BookVault
 3. Install the dependencies
    There are two directories in this project - one for backend and one for the frontend. You need to install dependencies for both.
- ## For the backend:
+For the backend:
    cd Backend
    npm install
- ## For the frontend:
+For the frontend:
    cd ../Frontend
    npm install
 4. Set up the database (MongoDB)
@@ -51,10 +51,10 @@ In this project MongoDB Atlas is being used, so be sure to have that set up. Upd
    MONGO_URI=your_mongodb_connection_string
 5. Running the application
 You will need to run the backend and frontend in the same time.
- # Running the backend:
+ Running the backend:
  Navigate to the Backend directory and run:
  npm start
- # Running the frontend:
+ Running the frontend:
  Then navigate to the Frontend directory and run:
  npm run dev
  6. Accessing the application
