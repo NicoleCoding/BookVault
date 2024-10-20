@@ -20,11 +20,11 @@ The application gives users the opportunity to find books that they want to read
 - Tailwind.css
 - JavaScript
 
-  # Backend
-  - Node.js
-  - MongoDB Atlas
-  - Express.js
-  - Mongoose
+# Backend
+- Node.js
+- MongoDB Atlas
+- Express.js
+- Mongoose
 
 
 # Getting started
