@@ -12,6 +12,7 @@ root {
   padding: 0;
   margin: auto;
   background-color: #D8E6FF;
+  overflow: hidden;
 }
 
 #button-container {
@@ -29,12 +30,17 @@ header {
   color:  #333333;
   width: 100%;
   margin: 0;
-  height: 40vh;
+  height: 50vh;
   overflow-x: hidden;
 }
 
 nav {
   overflow-y: hidden;
+}
+
+p {
+  margin: 0 auto;
+  max-width: fit-content;
 }
 
 section {
@@ -57,7 +63,7 @@ footer {
   background-size: cover; /* Covers the entire section */
   background-position: center;
   height: 25rem; /* Suitable height for mobile */
-  width: 100vw; /* Full width */
+  width: 94vw; /* Full width */
   padding: 1rem;
   display: flex;
   flex-direction: column;
