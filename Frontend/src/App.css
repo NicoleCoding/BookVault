@@ -12,7 +12,7 @@ root {
   padding: 0;
   margin: auto;
   background-color: #D8E6FF;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 #button-container {
@@ -205,6 +205,7 @@ input[type="number"] {
   border: 1px solid #E0E0E0;
   margin: 1rem;
   border-radius: 5px;
+  text-align: center;
 }
 
 /* Styles for screens larger than 768px */
@@ -217,7 +218,7 @@ input[type="number"] {
   
   #container {
     align-items: center;
-    height: 50rem;
+    height: auto;
     margin-top: 15rem;
   }
   
@@ -319,16 +320,17 @@ input[type="number"] {
     background-color: #F0F0F0;
     padding: 1rem;
     border: 1px solid #E0E0E0;
-    margin: 1rem;
+    margin: 0.8px;
     border-radius: 5px;
   }
   
   #books-display {
     border-radius: 5px;
+    width: auto;
     background-color: #D8E6FF;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 2rem;
     margin: 0;
     background-color: rgb(237, 237, 237);
   }
@@ -346,6 +348,7 @@ input[type="number"] {
   }
 
   form {
+    width: auto;
     border-radius: 5px;
     padding: 2rem;
     margin: 0;
