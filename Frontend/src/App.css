@@ -1,7 +1,4 @@
 /* Styles for screens smaller than 768px */
-root {
-  background-color: #D8E6FF;
-}
 
 #container {
   display: flex;
@@ -11,7 +8,6 @@ root {
   height: auto;
   padding: 0;
   margin: auto;
-  background-color: #D8E6FF;
   overflow-x: hidden;
 }
 
@@ -22,12 +18,13 @@ root {
 
 body {
   padding: 1rem;
-  background-color: #D8E6FF;
+  background-image: url(assets/library2.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 header {
-  background-color: #D8E6FF;
-  color:  #333333;
+  color:  #F0F0F0;
   width: 100%;
   margin: 0;
   height: 50vh;
@@ -36,6 +33,7 @@ header {
 
 nav {
   overflow-y: hidden;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 p {
@@ -48,31 +46,12 @@ section {
 }
 
 footer {
-  color:  #333333;
+  color: #F0F0F0;
   text-align: center;
   height: 5vh;
   width: 90vw;
   padding-top: 10rem;
-  background-color: #D8E6FF;
 
-}
-
-#hero {
-  background-image: url("./assets/bookshelf.avif");
-  background-repeat: no-repeat;
-  background-size: cover; /* Covers the entire section */
-  background-position: center;
-  height: 25rem; /* Suitable height for mobile */
-  width: 94vw; /* Full width */
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  border-radius: 5px;
-  color: white; /* Text color for contrast */
 }
 
 #hero-text {
@@ -91,17 +70,20 @@ footer {
 }
 
 #hero-heading {
-  color: white;
+  color: #F0F0F0;
+  font-size: x-large;
 }
 
 .page-heading {
-  color:  #333333;
+  color: #F0F0F0;
   text-align: center;
 }
 
 .page-intro {
-  color: #333333;
+  color: #F0F0F0;
   text-align: center;
+  padding: 1px;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .menu {
@@ -122,13 +104,14 @@ footer {
 }
 
 .nav-link {
-  color:  #333333;
+  color:  #F0F0F0;
   padding: 1rem;
   font-size:x-large;
 }
 
 .link:hover {
   color: #4A5D90;
+  text-decoration: underline;
 }
 
 .primary-button {
@@ -136,7 +119,7 @@ footer {
   padding: 20px 20px;
   width: 20rem;
   background-color: #003366;
-  color: white;
+  color: #F0F0F0;
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   text-align: center;
@@ -149,7 +132,7 @@ footer {
   border-radius: 5px;
   background-color: #88C0D0;
   text-align: center;
-  color: white;
+  color: #F0F0F0;
 
 }
 
@@ -250,7 +233,7 @@ input[type="number"] {
     padding: 0 16px;
     height: 36px;
     width: 15rem;
-    color: white;
+    color: #F0F0F0;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -267,7 +250,7 @@ input[type="number"] {
     height: 36px;
     width: 15rem;
     text-align: center;
-    color: white;
+    color: #F0F0F0;
   
   }
 
@@ -286,7 +269,6 @@ input[type="number"] {
     position: absolute;
     top: 0;
     height: 12rem;
-    color:  #333333;
   }
 
   footer {
