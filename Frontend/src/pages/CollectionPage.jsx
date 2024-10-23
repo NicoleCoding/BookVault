@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import { useEffect } from "react";
 import axios from 'axios';
 import { IoMdAdd } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 export default function CollectionPage() {
     const [library, setLibrary] = useState([]);
@@ -65,7 +66,7 @@ export default function CollectionPage() {
         <>
             <section>
                 <h2 className="page-heading">Your Book Collection</h2>
-                <p className="page-intro">This is where your favorite books live! Browse through your collection, track what you have already read, and keep tabs on books you want to read next. You can also remove books that you no longer want in your collection.
+                <p className="page-intro">This is where your favorite books live! Browse through your collection, track what you have already read, and keep tabs on books you want to read next. You can also remove books that you no longer want in your collection. Not sure what to add? You can find books on the <Link className="link" to="/search">search page</Link>.
                 </p>
             <div id="button-container">
                 <Button className="secondary-button" icon={showForm ? null : <IoMdAdd />} onClick={() => setShowForm(!showForm)} text={showForm ? 'Hide form' : 'Add new book'} />

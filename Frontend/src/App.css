@@ -121,7 +121,7 @@ footer {
   display: block;
 }
 
-.link {
+.nav-link {
   color:  #333333;
   padding: 1rem;
   font-size:x-large;
@@ -366,17 +366,17 @@ input[type="number"] {
   }
   
   input[type="text"] {
-    width: 20vw;
+    width: 15vw;
     height: 1vh;
-    padding: 2%;
-    margin: 2%;
+    padding: 1%;
+    margin: 1%;
   }
   
   input[type="number"] {
-    width: 20vw;
+    width: 15vw;
     height: 1vh;
-    padding: 2%;
-    margin: 2%;
+    padding: 1%;
+    margin: 1%;
   }
 
 }

@@ -4,6 +4,7 @@ import SearchBar from "../components/SearchBar";
 import ResultOverview from '../components/ResultOverview';
 import DetailsView from '../components/DetailsView';
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function SearchPage() {
     // States for the search result, the query and the book which is selected by the user.
@@ -38,7 +39,7 @@ export default function SearchPage() {
         <>
             <section>
                 <h2 className="page-heading">Find Your Next Favorite Book</h2>
-                <p className="page-intro">Use the search bar to find books by title, author, or subject. Whether you are looking for a specific book or exploring new reads, this is where your next adventure begins. Once you find a book you like, you can add it to your personal collection for future reading</p>
+                <p className="page-intro">Use the search bar to find books by title, author, or subject. Whether you are looking for a specific book or exploring new reads, this is where your next adventure begins. Once you find a book you like, you can add it to your <Link className="link" to="/collection">personal collection</Link> for future reading</p>
             </section>
             <SearchBar search={() => {}} changeContent={changeContent} query={query}/>
             <ResultOverview data={result} displaySelectedBook={displaySelectedBook}/>
