@@ -54,6 +54,19 @@ footer {
 
 }
 
+#hero {
+  height: 25rem; /* Suitable height for mobile */
+  width: 94vw; /* Full width */
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  border-radius: 5px;
+}
+
 #hero-text {
   background-color: rgba(255, 255, 255, 0.667);
   text-align: center;
