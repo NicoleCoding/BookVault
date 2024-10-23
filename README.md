@@ -17,7 +17,7 @@ The application gives users the opportunity to find books that they want to read
 - React
 - Vite
 - Axios
-- Tailwind.css
+- CSS
 - JavaScript
 
 # Backend
