@@ -16,9 +16,9 @@ export default function Nav() {
                 <Hamburger toggled={isOpen} toggle={setOpen} />
             </div>
             <ul className={`menu ${isOpen ? "open" : ""}`}>
-                <li> <FaHome /><Link className="nav-link link" to="/">Start</Link></li>
-                <li><GiArchiveResearch /><Link className="nav-link link" to="/search">Search Books</Link></li>
-                <li><GiBookshelf /><Link className="nav-link link" to="/collection">Book Collection</Link></li>
+                <li> <FaHome /><Link className="nav-link" to="/">Start</Link></li>
+                <li><GiArchiveResearch /><Link className="nav-link" to="/search">Search Books</Link></li>
+                <li><GiBookshelf /><Link className="nav-link" to="/collection">Book Collection</Link></li>
             </ul>
         </nav>
 
