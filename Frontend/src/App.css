@@ -11,11 +11,6 @@
   overflow-x: hidden;
 }
 
-#button-container {
-  display: flex;
-  justify-content: center;
-}
-
 body {
   padding: 1rem;
   background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
@@ -161,6 +156,8 @@ footer {
   border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   text-align: center;
+  align-content: center;
+  font-size: large;
 }
 
 .secondary-button {
