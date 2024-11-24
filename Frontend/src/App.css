@@ -44,11 +44,15 @@ table {
   margin: 2px;
   border-radius: 5px;
   border-collapse: collapse;
+  border: 1px solid black;
+  width: 30rem;
 }
 
 td {
   padding: 2px;
   margin: 3px;
+  font-size: 80%;
+  height: 5rem;
   border: 1px solid black;
   text-align: center;
 }
@@ -104,7 +108,7 @@ footer {
   color: #F0F0F0;
   text-align: center;
   padding: 1px;
-  width: 50rem;
+  width: auto;
 }
 
 .menu {
@@ -147,23 +151,29 @@ footer {
   text-shadow: 0px 0px 8px rgba(0, 210, 255, 0.6);
 }
 
+
 .primary-button {
-  margin: 1rem;
-  padding: 20px 20px;
-  width: 20rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; 
+  padding: 10px 20px;
+  border: none;
+  line-height: 1;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
   background-color: #003366;
   color: #F0F0F0;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  text-align: center;
-  align-content: center;
-  font-size: large;
 }
 
+
 .secondary-button {
-  margin: 1rem;
-  padding: 20px 20px;
-  width: 20rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; 
+  padding: 10px 20px;
+  line-height: 1;
+  cursor: pointer;
   border-radius: 5px;
   background-color: #88C0D0;
   text-align: center;
@@ -171,6 +181,10 @@ footer {
 
 }
 
+#button-container {
+  display: flex;
+  justify-content: center;
+}
 
 #searchbar {
   display: flex;
@@ -185,9 +199,17 @@ footer {
 }
 
 .icon {
-  margin-right: 1px;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  margin-right: 0px;
+
 }
+
+.button-text {
+  display: inline-block;
+  line-height: 1;
+}
+
 
 form {
   display: flex;
@@ -267,14 +289,15 @@ input[type="number"] {
     padding: 2rem;
     font-weight: 500;
   }
+
+  .page-intro {
+    width: 50rem;
+  }
   
   .primary-button {
-    margin: 1rem;
-    padding: 0 16px;
-    height: 36px;
-    width: 15rem;
-    color: #F0F0F0;
+    padding: 5px 5px;
     border-radius: 5px;
+    height: 36px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     text-align: center;

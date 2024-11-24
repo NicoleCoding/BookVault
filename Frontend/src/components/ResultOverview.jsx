@@ -27,7 +27,7 @@ export default function ResultOverview(props) {
             <tr>
               <th>Title</th>
               <th>Author</th>
-              <th>Initial publication year</th>
+              <th>Publication year</th>
             </tr>
           </thead>
           <tbody>
