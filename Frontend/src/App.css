@@ -11,6 +11,13 @@
   overflow-x: hidden;
 }
 
+.rubik-doodle-shadow-regular {
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 body {
   padding: 1rem;
   background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
@@ -90,13 +97,13 @@ footer {
   height: 35vh;
   border-radius: 5px;
   margin: 0;
-  padding: 1rem;
   font-weight: 500;
 }
 
 #hero-heading {
-  color: #F0F0F0;
-  font-size: x-large;
+  color: black;
+  font-size: large;
+  font-family: "Rubik Doodle Shadow";
 }
 
 .page-heading {
@@ -287,11 +294,16 @@ input[type="number"] {
 
   #hero-text {
     text-align: center;
-    width: 60rem;
     font-size: x-large;
-    line-height: 1.6;
-    padding: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     font-weight: 500;
+    height: 12rem;
+    width: 60rem;
+  }
+
+  #hero-heading {
+    font-size: xx-large;
   }
 
   .page-intro {
