@@ -22,7 +22,7 @@ export default function Form({onAddBook}) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <h3>Book form</h3>
+            <h3>Add Book to Vault</h3>
             <label>
                 Title
             </label>

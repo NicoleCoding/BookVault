@@ -20,7 +20,7 @@
 
 body {
   padding: 1rem;
-  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
 }
 
 header {
@@ -30,6 +30,7 @@ header {
   margin: 0;
   height: 60vh;
   overflow-x: hidden;
+  text-align: center;
 }
 
 nav {
@@ -84,12 +85,11 @@ footer {
   text-align: center;
   position: relative;
   border-radius: 5px;
-   background-image: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
 }
 
 #hero-text {
   text-align: center;
-  color:  #333333;
+  color:  white;
   width: 70vw;
   font-size: large;
   line-height: 1.6;
@@ -97,11 +97,12 @@ footer {
   height: 35vh;
   border-radius: 5px;
   margin: 0;
+  padding: 1rem;
   font-weight: 500;
 }
 
 #hero-heading {
-  color: black;
+  color: white;
   font-size: large;
   font-family: "Rubik Doodle Shadow";
 }
@@ -148,49 +149,59 @@ li {
 }
 
 .nav-link:hover {
-  color: #FFD700;
-  text-decoration: underline;
-  text-shadow: 0px 0px 8px rgba(0, 210, 255, 0.6);
+  color: black;
 }
 
 .link {
-  color: #003366;
+  color: black;
+  text-decoration: underline;
 }
 
-.link:hover {
-  color: #FFD700;
-  text-decoration: underline;
-  text-shadow: 0px 0px 8px rgba(0, 210, 255, 0.6);
-}
 
 
 .primary-button {
   display: inline-flex;
   align-items: center;
-  justify-content: center; 
-  padding: 10px 20px;
-  border: none;
-  line-height: 1;
-  margin: 10px;
+  justify-content: center;
+  line-height: 1.5;
+  margin: 1rem auto;
+  width: 100%;
   cursor: pointer;
   font-size: 16px;
-  background-color: #003366;
-  color: #F0F0F0;
+  transition: color 0.3s ease;
+  text-align: center;
+  box-shadow: 0 0 10px #eee;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #6a11cb;
+  border: 2px solid #6a11cb;
 }
 
+.primary-button:hover {
+  background-color: #6a11cb;
+  color: #fff;
+}
 
 .secondary-button {
   display: inline-flex;
   align-items: center;
   justify-content: center; 
-  padding: 10px 20px;
+  width: 100%;
   line-height: 1;
+  margin: 0 auto;
   cursor: pointer;
   border-radius: 5px;
-  background-color: #88C0D0;
   text-align: center;
-  color: #F0F0F0;
+  box-shadow: 0 0 10px #eee;
+  background-color: #D3D3D3;
+  color: #2575fc;
+  border: 2px solid #2575fc;
 
+}
+
+.secondary-button:hover {
+  background-color: #A9A9A9;
+  color: white;
 }
 
 #button-container {
@@ -202,7 +213,12 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 
+}
+
+#search {
+  width: 100%;
 }
 
 #hero-icon {
@@ -227,6 +243,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
 }
 
 label {
@@ -244,23 +261,23 @@ input[type="checkbox"] {
 }
 
 input {
-  margin: 5%;
+  margin: 2% auto;
   padding: 5%;
 }
 
 input[type="text"] {
-  width: 60vw;
+  width: 100%;
 }
 
 input[type="number"] {
-  width: 60vw;
+  width: 100%;
 }
 
 .book-item {
   background-color: #F0F0F0;
   padding: 1rem;
   border: 1px solid #E0E0E0;
-  margin: 1rem;
+  margin: 5px auto;
   border-radius: 5px;
   text-align: center;
 }
@@ -276,7 +293,8 @@ input[type="number"] {
   #container {
     align-items: center;
     height: auto;
-    margin-top: 15rem;
+    margin-top: 10rem;
+    
   }
   
   #hero {
@@ -314,34 +332,37 @@ input[type="number"] {
     padding: 5px 5px;
     border-radius: 5px;
     height: 36px;
+    width: 15vw;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     text-align: center;
   }
 
-  .primary-button:hover {
-    color: #FFD700;
-  }
   
   .secondary-button {
     margin: 1rem;
     padding: 0 16px;
     height: 36px;
-    width: 15rem;
+    width: 15vw;
     text-align: center;
-    color: #F0F0F0;
   
   }
 
-  .secondary-button:hover {
-    color: #003366;
-  }
   
   #searchbar {
     padding: 1rem;
-    margin: 1rem;
+    margin: 1rem auto;
     display: flex;
     flex-direction: row;
+    width: 30vw;
+    border: #2575fc solid 1px;
+    background-color: #F0F0F0;
+    border-radius: 5px;
+  }
+
+  #search {
+    padding: 0.7rem;
+    width: 15vw;
   }
   
   header {

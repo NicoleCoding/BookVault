@@ -18,6 +18,7 @@ export default function SearchBar(props) {
                     placeholder="Search books"
                     onChange={props.changeContent}
                     onKeyDown={handleKeyDown}
+                    id="search"
                 />
             <Button className="primary-button" text="Search" icon={<AiOutlineSearch />} onClick={() => props.search(props.query)}  />
 
