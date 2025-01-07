@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Button from "./Button";
 
 export default function ResultOverview(props) {
-  const itemsPerPage = 20;
+  const itemsPerPage = 10;
   const [currentPage, setCurrentPage] = useState(1);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -21,40 +21,42 @@ export default function ResultOverview(props) {
   return (
     <>
       {props.data.length > 0 && (
-        <>
-        <table>
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Author</th>
-              <th>Publication year</th>
-            </tr>
-          </thead>
-          <tbody>
-            {currentData.map((queryItem, index) => (
-              <tr key={startIndex + index} onClick={() => props.displaySelectedBook(startIndex + index)}>
-                <td>{queryItem.title}</td>
-                <td>
-                  {queryItem.author_name && queryItem.author_name.length > 0
-                    ? queryItem.author_name[0]
-                    : "Unknown author"}
-                </td>
-                <td>{queryItem.first_publish_year}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
         <div>
-          <Button text="Previous Page" onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage === 1}>
-          </Button>
-          <span>Page {currentPage} of {totalPages}</span>
-          <Button text="Next Page" onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === totalPages}>
-          </Button>
-
+          <div className="book-results">
+            {currentData.map((queryItem, index) => (
+            <div 
+              key={startIndex + index} 
+              className="book-result" 
+              onClick={() => props.displaySelectedBook(startIndex + index)}
+            >
+              <h3 className="book-title">{queryItem.title}</h3>
+              <p className="book-author">
+                <strong>Author:</strong> {queryItem.author_name && queryItem.author_name.length > 0 
+                  ? queryItem.author_name[0] 
+                  : "Unknown author"}
+              </p>
+              <p className="book-year">
+                <strong>Publication Year:</strong> {queryItem.first_publish_year || "N/A"}
+              </p>
+            </div>
+            ))}
         </div>
-        </>
+        <div className="pagination">
+          <Button 
+            text="Previous" 
+            onClick={() => handlePageChange(currentPage - 1)} 
+            disabled={currentPage === 1} 
+            className="primary-button" 
+          />
+          <span>Page {currentPage} of {totalPages}</span>
+          <Button 
+            text="Next" 
+            onClick={() => handlePageChange(currentPage + 1)} 
+            disabled={currentPage === totalPages} 
+            className="primary-button" 
+          />
+        </div>
+      </div>
       )}
     </>
   );
