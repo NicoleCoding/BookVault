@@ -101,12 +101,11 @@ footer {
   text-align: center;
   position: relative;
   border-radius: 5px;
-  background-color: #F0F0F0;
 }
 
 #hero-text {
   text-align: center;
-  color:  black;
+  color:  white;
   width: 70vw;
   font-size: large;
   line-height: 1.6;
@@ -119,7 +118,7 @@ footer {
 }
 
 #hero-heading {
-  color: #6a11cb;
+  color: white;
   font-size: large;
   font-family: "Rubik Doodle Shadow";
 }
@@ -191,7 +190,7 @@ li {
   font-size: 16px;
   transition: color 0.3s ease;
   text-align: center;
-  box-shadow: 0 0 10px #eee;
+  box-shadow: 0 0 1px #eee;
   border-radius: 5px;
   background-color: #fff;
   color: #6a11cb;
@@ -213,8 +212,8 @@ li {
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
-  box-shadow: 0 0 10px #eee;
-  background-color: #D3D3D3;
+  box-shadow: 0 0 1px #eee;
+  background-color: white;
   color: #2575fc;
   border: 2px solid #2575fc;
 
@@ -244,7 +243,7 @@ li {
 
 #hero-icon {
   text-shadow: 0px 0px 8px rgba(0, 210, 255, 0.6);
-  color: #2575fc;
+  color: white;
   animation: pulse 10s infinite;
 }
 
