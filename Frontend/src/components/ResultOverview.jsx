@@ -17,6 +17,30 @@ export default function ResultOverview(props) {
     }
   };
 
+  const handleAddBook = async (book) => {
+    try {
+      const response = await fetch("http://localhost:5000/api/books", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title: book.title,
+          author: book.author_name?.join(", ") || "Unknown",
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to add book");
+      }
+
+      alert("Book added successfully!");
+      props.fetchBooks(); // Update BooksDisplay
+    } catch (error) {
+      console.error("Error adding book:", error);
+    }
+  };
+
 
   return (
     <>
@@ -38,6 +62,11 @@ export default function ResultOverview(props) {
               <p className="book-year">
                 <strong>Publication Year:</strong> {queryItem.first_publish_year || "N/A"}
               </p>
+              <Button 
+                text="Add book to collection"
+                onClick={() => handleAddBook(queryItem)}
+                className="primary-button"
+              />
             </div>
             ))}
         </div>
