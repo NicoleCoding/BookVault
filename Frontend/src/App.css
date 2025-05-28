@@ -349,6 +349,16 @@ input[type="number"] {
     width: 60rem;
   }
 
+  .books-empty-message {
+  text-align: center;
+  color: #cdcdcd;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  margin-left: 1rem; 
+  text-align: left;       
+  max-width: 1000px; 
+}
+
 
 
   #hero-heading {
@@ -446,7 +456,7 @@ input[type="number"] {
   
   #books-display {
     border-radius: 5px;
-    width: auto;
+    width: 50%;
     background-color: #D8E6FF;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -468,7 +478,7 @@ input[type="number"] {
   }
 
   form {
-    width: auto;
+    width: 50%;
     border-radius: 5px;
     padding: 2rem;
     margin: 0;

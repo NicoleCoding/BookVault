@@ -5,34 +5,34 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 
 const uri = process.env.MONGODB_URI;
+const PORT = process.env.PORT || 5000;
 
 const app = express();
-const PORT = 5000;
 app.use(cors({ origin: 'http://localhost:5173' }));
-
-const bookRoutes = require('./routes/books'); // Import the book routes
-
-// Middleware to parse JSON
 app.use(express.json());
 
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
-    console.log('MongoDB connected successfully');
-    // You can start your server here if needed
-  })
-  .catch(err => {
-    console.error('MongoDB connection error:', err);
-  });
-
-// Use the book routes
-app.use('/api/books', bookRoutes);
+const bookRoutes = require('./routes/books'); // Import the book routes
+app.use('/api/books', bookRoutes); // Use the book routes
 
 // Sample route
 app.get('/', (req, res) => {
     res.send('Backend server is working!');
 });
 
-// Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+// Error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({ error: 'Something went wrong!' });
 });
+
+mongoose.connect(uri)
+  .then(() => {
+    console.log('MongoDB connected successfully');
+    app.listen(PORT, () => {
+        console.log(`Server is running on http://localhost:${PORT}`);
+    });
+  })
+  .catch(err => {
+    console.error('MongoDB connection error:', err);
+    process.exit(1); // Exit if DB connection fails
+  });
