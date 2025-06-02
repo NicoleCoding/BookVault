@@ -1,4 +1,3 @@
-import { AiOutlineSearch } from "react-icons/ai";
 import Button from "./Button";
 
 
@@ -20,7 +19,7 @@ export default function SearchBar(props) {
                     onKeyDown={handleKeyDown}
                     id="search"
                 />
-            <Button className="primary-button" text="Search" icon={<AiOutlineSearch />} onClick={() => props.search(props.query)}  />
+            <Button className="primary-button" text="Search" onClick={() => props.search(props.query)}  />
 
         </div>
 

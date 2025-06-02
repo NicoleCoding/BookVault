@@ -4,7 +4,6 @@ import Form from "../components/Form";
 import Button from "../components/Button";
 import { useEffect } from "react";
 import axios from 'axios';
-import { IoMdAdd } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 export default function CollectionPage() {
@@ -69,7 +68,7 @@ export default function CollectionPage() {
                 <p className="page-intro">This is where your favorite books live! Browse through your collection, track what you have already read, and keep tabs on books you want to read next. You can also remove books that you no longer want in your collection. Not sure what to add? You can find books on the <Link className="link" to="/search">search page</Link>.
                 </p>
             <div id="button-container">
-                <Button className="primary-button" icon={showForm ? null : <IoMdAdd />} onClick={() => setShowForm(!showForm)} text={showForm ? 'Hide form' : 'Add new book'} />
+                <Button className="primary-button" onClick={() => setShowForm(!showForm)} text={showForm ? 'Hide form' : 'Add new book'} />
             </div>  
             </section>
             <section id="collection-container">
