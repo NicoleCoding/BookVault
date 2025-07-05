@@ -20,7 +20,10 @@
 
 body {
   padding: 0;
-  /* background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); */
+  background-image: url('public/books.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 header {
@@ -42,6 +45,7 @@ nav {
 p {
   margin: 0 auto;
   max-width: fit-content;
+  font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 section {
